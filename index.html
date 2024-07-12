@@ -11,31 +11,40 @@
     <section>
       <header class="gallery" id="gallery">
         <div>
-          <img
-            class="gallerythumb"
-            id="gallery"
-            src="./citypic.jpg"
-            alt="A stunning view of a city"
-          />
-          <img
-            class="gallerythumb"
-            id="gallery"
-            src="./forestpic.jpg"
-            alt="An incredible view of a forest from on high"
-          />
-          <img
-            class="gallerythumb"
-            id="gallery"
-            src="./roadpic.jpg"
-            alt="A view of a road lit by a sunset"
-          />
+          <button onclick="setcity()" class="cityButton">
+            <img
+              class="gallerythumb"
+              id="gallery1"
+              src="./citypic.jpg"
+              alt="A stunning view of a city"
+              title="A stunning view of a city"
+            />
+          </button>
+          <button onclick="setforest()" class="forestButton">
+            <img
+              class="gallerythumb"
+              id="gallery2"
+              src="./forestpic.jpg"
+              alt="An incredible view of a forest from on high"
+              title="An incredible view of a forest from on high"
+            />
+          </button>
+          <button onclick="setroad()" class="roadButton">
+            <img
+              class="gallerythumb"
+              id="gallery3"
+              src="./roadpic.jpg"
+              alt="A view of a road lit by a sunset"
+              title="A view of a road lit by a sunset"
+            />
+          </button>
         </div>
       </header>
     </section>
     <div id="main"></div>
-    <button class="navbutton1" id="nav1"><</button>
-    <button class="navbutton2" id="nav2">></button>
-    <img class="main-image" src="./roadpic.jpg" />
+    <button class="navbutton1" id="nav1" title="Previous image"><</button>
+    <button class="navbutton2" id="nav2" title="Next image">></button>
+    <img class="main-image" src="./roadpic.jpg" id="main-image" />
     <footer>A website by Nathan Scott-Smith</footer>
   </body>
 </html>

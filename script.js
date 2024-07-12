@@ -1,14 +1,21 @@
 console.log("Hello world");
 
+const mainImage = document.getElementById("main-image");
+
+const images = ["roadpic.jpg", "citypic.jpg", "forestpic.jpg"];
 let currentIndex = 0;
-const images = [
-  { src: "forestpic.jpg", alt: "A view of a forest from on high" },
-  { src: "citypic.jpg", alt: "A stunning view of a city" },
-];
 
-//function changeBG() {}
+function nextImage() {
+  currentIndex++;
+  mainImage.src = images[currentIndex];
+}
 
-var gallery = document.getElementById("gallery");
+function prevImage() {
+  currentIndex--;
+  mainImage.src = images[currentIndex];
+}
+
+const gallery = document.getElementById("gallery");
 
 gallery.addEventListener("mouseover", function () {
   gallery.style.opacity = 0.6;
@@ -18,7 +25,7 @@ gallery.addEventListener("mouseout", function () {
   gallery.style.opacity = 0.1;
 });
 
-var previous = document.getElementById("nav1");
+const previous = document.getElementById("nav1");
 
 previous.addEventListener("mouseover", function () {
   previous.style.opacity = 0.6;
@@ -28,7 +35,9 @@ previous.addEventListener("mouseout", function () {
   previous.style.opacity = 0.3;
 });
 
-var next = document.getElementById("nav2");
+previous.addEventListener("click", prevImage);
+
+const next = document.getElementById("nav2");
 
 next.addEventListener("mouseover", function () {
   next.style.opacity = 0.6;
@@ -38,5 +47,17 @@ next.addEventListener("mouseout", function () {
   next.style.opacity = 0.3;
 });
 
-// Need to implement currentindex and currentindex ++ and -- so buttons change the pictures
+next.addEventListener("click", nextImage);
+
+function setforest() {
+  mainImage.src = images[2];
+}
+
+function setroad() {
+  mainImage.src = images[0];
+}
+
+function setcity() {
+  mainImage.src = images[1];
+}
 // also need to implement the device screen size stuff

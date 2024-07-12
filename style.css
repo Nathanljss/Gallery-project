@@ -60,6 +60,18 @@ body {
   opacity: 0.6;
 }
 
+.cityButton {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.forestButton {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.roadButton {
+  background-color: rgba(255, 255, 255, 0);
+}
+
 footer {
   background-color: black;
   color: white;
